@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>targeted selectors</title>
+    <style>
+         ul {
+        background:blue;
+         }
+        li:last-child{
+            background:red;
+        }
+        /*position2*/
+        li:nth-child(2){
+            background-color:yellow;
+        }
+       h1{
+           text-align: center;
+
+       }
+       h1:hover{
+           color: indigo;
+       }
+       button{
+           color: lightcoral;
+       }
+       form{
+           padding-bottom: 20px;
+       }
+       
+    </style>
+</head>
+<body>
+    <h1>Targeted selectors</h1>
+<div>
+    <p>Lorem ipsum dolor sit amet consectetur<span style ="color:greenyellow;">adipisicing elit. Amet voluptates</span> labore voluptatum at, veniam odio.</p>
+</div>
+<div>
+<ul>
+    <lh>domestic animals</lh>
+    <li>cat</li>
+    <li>cow</li>
+    <li>goat</li>
+    <li>ox</li>
+</ul>
+
+ </div>  
+ 
+ <form>
+     <input type="text"placeholder="name"><br>
+     <input type="address"placeholder="address"><br>
+     <label for="submit"placeholder="submit"></label>
+     <input type="submit"value="button"><br>
+     <input type="checkbox"value="mark it">
+ </form>
+</body>
+</html>
