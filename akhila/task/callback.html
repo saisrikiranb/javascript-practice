@@ -11,12 +11,19 @@
     <!--setTimeout(): we can use set timeout to execute the particular function at certain point of time -->
 
     <h1 id="i"></h1>
+    <button onclick="myFunction()">Try it</button>
 
     <script>
         setTimeout(display, 10000);
 
         function display() {
             document.getElementById("i").innerHTML = "Hello world";
+        }
+
+        function myFunction() {
+            setTimeout(function() {
+                alert("Hello");
+            }, 10000);
         }
     </script>
 
