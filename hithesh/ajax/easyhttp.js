@@ -19,7 +19,7 @@ easyHTTP.prototype.get=function(url,callback){
 easyHTTP.prototype.post=function(url,data,callback){
     this.http.open('POST',url,true);
     this.http.setRequestHeader('content-type','application/json');
-    //this.send(JSON.stringify(data));
+    
 
     let self =this;
     this.http.onload = function(){
