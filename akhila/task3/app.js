@@ -1,17 +1,38 @@
-async function generateRandom() {
+function generateRandom() {
     var x = Math.random();
 
-    let promise = new Promise((resolve, reject) => {
-        setTimeout(() => resolve(x), 1000)
+    let px = new Promise((resolve, reject) => {
+
+        setTimeout(
+            () => {
+                if(x > 0.5)
+                    reject({err: "x value is greater than 0.5"});
+                else
+                    resolve(x);
+            }
+        , 2000)
     });
-    if (x < 0.5) {
-        let result = await promise; // wait until the promise resolves (*)
-
-        console.log(x); // "done!"
-
-    }
-
-
+    console.log("x outside: ", x);
+    return px; // this is promise
 }
 
-generateRandom();
+// generateRandom();
+
+async function major() {
+
+    // generateRandom()
+    //     .then(
+    //         //success case - what to do
+    //     )
+    //     .catch(
+    //         //failure case - what to do
+    //     )
+
+
+    try {
+        let result = await generateRandom(); // wait until the promise resolves (*)
+        console.log(result); // "done!"
+    } catch(ex) {
+        alert(JSON.stringify(ex));
+    }
+}
