@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<h2>JavaScript Callback</h2>
+
+<p><strong>To display 'Hello World' after 10 seconds</strong></p>
+
+<body>
+    <!-- Call back : Function is passed as an argument so that
+     we can call that function after the execution of the previous function -->
+
+    <!--setTimeout(): we can use set timeout to execute the particular function at certain point of time -->
+
+    <h1 id="i"></h1>
+    <button onclick="myFunction()">Try it</button>
+
+    <script>
+        setTimeout(display, 10000);
+
+        function display() {
+            document.getElementById("i").innerHTML = "Hello world";
+        }
+
+        function myFunction() {
+            setTimeout(function() {
+                alert("Hello");
+            }, 10000);
+        }
+    </script>
+
+</body>
+
+</html>
